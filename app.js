@@ -43,9 +43,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(3000,function(err){
-  if(err) throw err;
-  console.log("================= Server was started =================");
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
 module.exports = app;

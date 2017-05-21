@@ -13,7 +13,7 @@ const searchTerm = require('../models/searchTerm.js');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 // Connect to database
-//mongoose.connect('mongodb://tungdt:123456@ds147681.mlab.com:47681/tungdt');
+mongoose.connect('mongodb://tungdt:123456@ds147681.mlab.com:47681/tungdt');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
