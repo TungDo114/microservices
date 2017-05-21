@@ -9,6 +9,8 @@ const shortUrl = require('../models/shortUrl.js');
 const GoogleImages = require('google-images');
 const client = new GoogleImages('010314164505178810779:kakhwalzbqy', 'AIzaSyBjWmEZbUKsH7uRPSz-9QNjuu6BUmwfgJE');
 const searchTerm = require('../models/searchTerm.js');
+const multer = require('multer');
+var upload = multer({dest:'uploads/'});
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
@@ -133,6 +135,12 @@ router.get('/api/imagesearch/latest/',(req, res, next)=>{
         });
         res.send(searchTermMap);
     });
+});
+
+/* =========== Image Search Abstraction Layer Incomplete =========== */
+router.post('/api/fileupload',upload.single('file'),(req, res, next)=>{
+  console.log("listen file");
+  return res.json(req.file);
 });
 
 module.exports = router;

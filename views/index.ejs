@@ -78,6 +78,21 @@
     <p class="example"> https://gentle-brook-95287.herokuapp.com/api/imagesearch/lol%20cat?offset=10 </p>
     <p class="example"> https://gentle-brook-95287.herokuapp.com/api/imagesearch/latest/ </p>
     </div>
+
+    <hr/>
+    <div class="service">
+    <h2>File Metadata Microservice: </h2>
+    <p>User Stories: </p>
+    <p>1) I can submit a FormData object that includes a file upload.</p>
+    <p>2) When I submit something, I will receive the file size in bytes within the JSON response.</p>
+    
+    <h3>Example usage: </h3>
+    <form action="/api/fileupload" method="post" enctype="multipart/form-data">
+      <label for="title">Select a file</label>
+      <input type="file" id="file" name="file"/>
+      <input type="submit" value="Submit"/>
+    </form>
+    </div>
   </div>
   </div>
   </body>
