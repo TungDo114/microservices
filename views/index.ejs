@@ -11,6 +11,7 @@
     }
   </style>
   <body>
+    <div>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <div id="services">
@@ -23,8 +24,8 @@
       If it does not contain a date or Unix timestamp, it returns null for those properties</p>  
     
     <h3> Example usage: </h3>
-    <p class="example"> https://peaceful-falls-76862.herokuapp.com/api/timestamp/December%2015,%202015 </p>
-    <p class="example"> https://peaceful-falls-76862.herokuapp.com/api/timestamp/1450137600	</p>
+    <p class="example"> https://gentle-brook-95287.herokuapp.com/December%2015,%202015 </p>
+    <p class="example"> https://gentle-brook-95287.herokuapp.com/api/timestamp/1450137600	</p>
 
     <h3> Example output: </h3>
     <p class="example"> { "unix": 1450137600, "natural": "December 15, 2015" } </p>
@@ -36,7 +37,7 @@
     <p>1) I can get the IP address, language and operating system for my browser.</p>
 
     <h3> Example usage: </h3>
-    <p class="example"> https://peaceful-falls-76862.herokuapp.com/api/whoami </p>
+    <p class="example"> https://gentle-brook-95287.herokuapp.com/api/whoami </p>
 
     <h3> Example output: </h3>
     <p class="example"> {ipaddress : "192.168.0.1", language : "v", software: "Mozilla/5.0 (Macintosh" } </p>
@@ -51,7 +52,7 @@
     <p>3) When I visit that shortened URL, it will redirect me to my original link.</p>
     
     <h3> Example usage: </h3>
-    <p class="example"> https://peaceful-falls-76862.herokuapp.com/api/shorturl/new/http://stackoverflow.com/questions/8107856/how-to-determine-a-users-ip-address-in-node </p>
+    <p class="example"> https://gentle-brook-95287.herokuapp.com/api/shorturl/new/http://stackoverflow.com/questions/8107856/how-to-determine-a-users-ip-address-in-node </p>
 
     <h3> Example output: </h3>
     <p class="example"> {
@@ -70,9 +71,10 @@
     <p>3) I can get a list of the most recently submitted search strings.</p>
     
     <h3>Example usage: </h3>
-    <p class="example"> https://peaceful-falls-76862.herokuapp.com/api/imagesearch/lol%20cat?offset=10 </p>
-    <p class="example"> https://peaceful-falls-76862.herokuapp.com/api/imagesearch/latest/ </p>
+    <p class="example"> https://gentle-brook-95287.herokuapp.com/api/imagesearch/lol%20cat?offset=10 </p>
+    <p class="example"> https://gentle-brook-95287.herokuapp.com/api/imagesearch/latest/ </p>
     </div>
+  </div>
   </div>
   </body>
 </html>
