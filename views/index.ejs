@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <style>
+    .example {
+      color :#e74c3c;
+      background-color: #ecf0f1;
+    }
+  </style>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <div id="services">
+    <div class="service">
+    <h2>Timestamp service: </h2>
+    <p>User Stories: </p>
+    <p>1) I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a 
+      natural language date (example: January 1, 2016)</p>
+    <p>2) If it does, it returns both the Unix timestamp and the natural language form of that date.3) 
+      If it does not contain a date or Unix timestamp, it returns null for those properties</p>  
+    
+    <h3> Example usage: </h3>
+    <p class="example"> https://peaceful-falls-76862.herokuapp.com/api/timestamp/December%2015,%202015 </p>
+    <p class="example"> https://peaceful-falls-76862.herokuapp.com/api/timestamp/1450137600	</p>
+
+    <h3> Example output: </h3>
+    <p class="example"> { "unix": 1450137600, "natural": "December 15, 2015" } </p>
+    </div>
+    <hr>
+    <div class="service">
+    <h2>Request header parser service: </h2>
+    <p>User Stories: </p>
+    <p>1) I can get the IP address, language and operating system for my browser.</p>
+
+    <h3> Example usage: </h3>
+    <p class="example"> https://peaceful-falls-76862.herokuapp.com/api/whoami </p>
+
+    <h3> Example output: </h3>
+    <p class="example"> {ipaddress : "192.168.0.1", language : "v", software: "Mozilla/5.0 (Macintosh" } </p>
+    </div>
+    <hr>
+
+    <div class="service">
+    <h2>URL Shortener Microservice: </h2>
+    <p>User Stories: </p>
+    <p>1) I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</p>
+    <p>2) If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.</p>
+    <p>3) When I visit that shortened URL, it will redirect me to my original link.</p>
+    
+    <h3> Example usage: </h3>
+    <p class="example"> https://peaceful-falls-76862.herokuapp.com/api/shorturl/new/http://stackoverflow.com/questions/8107856/how-to-determine-a-users-ip-address-in-node </p>
+
+    <h3> Example output: </h3>
+    <p class="example"> {
+    originalUrl: "http://stackoverflow.com/questions/8107856/how-to-determine-a-users-ip-address-in-node",
+    shorterUrl: "30667",
+    _id: "59211affb151cb0b11908bd0"
+    }</p>
+    </div>
+    <hr>
+
+    <div class="service">
+    <h2>Image Search Abstraction Layer: </h2>
+    <p>User Stories: </p>
+    <p>1) I can get the image URLs, alt text and page urls for a set of images relating to a given search string.</p>
+    <p>2) I can paginate through the responses by adding a ?offset=2 parameter to the URL.</p>
+    <p>3) I can get a list of the most recently submitted search strings.</p>
+    
+    <h3>Example usage: </h3>
+    <p class="example"> https://peaceful-falls-76862.herokuapp.com/api/imagesearch/lol%20cat?offset=10 </p>
+    <p class="example"> https://peaceful-falls-76862.herokuapp.com/api/imagesearch/latest/ </p>
+    </div>
+  </div>
+  </body>
+</html>
